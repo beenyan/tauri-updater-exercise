@@ -19,7 +19,7 @@ tauri signer generate -w ~/.tauri/tauri_updater.key
 ## 2. Tag
 ```bash
 # 生成 Tag
-# git tag {version}
+# git tag app-v{version}
 
 git tag v0.0.1
 
