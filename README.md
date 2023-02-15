@@ -28,6 +28,9 @@ git tag v0.0.1
 git push --tag
 ```
 
+# Workflow permissions
+Workflows have read and write permissions in the repository for all scopes.
+
 ## 3. 在 tauri.conf.json 填上公鑰
 ![](mdimage/publickey.png)
 
