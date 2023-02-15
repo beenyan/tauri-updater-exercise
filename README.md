@@ -10,7 +10,7 @@ pnpm i -g @tauri-apps/cli
 ```
 
 ## 2. 生成簽名 
-```
+```bash
 # tauri signer generate -w ~/.tauri/{app_name}.key
 
 tauri signer generate -w ~/.tauri/tauri_updater.key
