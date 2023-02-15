@@ -1,8 +1,8 @@
-name: "publish"
+name: publish
 on:
   push:
     tags:
-      - 'v*'
+      - 'app-v*'
   workflow_dispatch:
 
 jobs:
