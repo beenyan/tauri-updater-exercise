@@ -60,19 +60,19 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           tag_name: ${{ github.ref_name }}
-          draft: true
+          draft: false
           files: |
             src-tauri/target/i686-pc-windows-msvc/release/bundle/msi/*
-      # - name: Build the app
-      #   uses: tauri-apps/tauri-action@v0
-      #   env:
-      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      #     TAURI_PRIVATE_KEY: ${{ secrets.TAURI_PRIVATE_KEY }}
-      #     TAURI_KEY_PASSWORD: "" # if u has password ${{ secrets.TAURI_KEY_PASSWORD }}
-      #   with:
-      #     tagName: ${{ github.ref_name }} # This only works if your workflow triggers on new tags.
-      #     releaseName: 'Tauri Release Exercise v__VERSION__' # tauri-action replaces \_\_VERSION\_\_ with the app version.
-      #     releaseBody: 'See the assets to download and install this version.'
-      #     releaseDraft: false
-      #     prerelease: false
 
+      - name: Build the app
+        uses: tauri-apps/tauri-action@v0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TAURI_PRIVATE_KEY: ${{ secrets.TAURI_PRIVATE_KEY }}
+          TAURI_KEY_PASSWORD: "" # if u has password ${{ secrets.TAURI_KEY_PASSWORD }}
+        with:
+          tagName: ${{ github.ref_name }} # This only works if your workflow triggers on new tags.
+          releaseName: 'Tauri Release Exercise v__VERSION__' # tauri-action replaces \_\_VERSION\_\_ with the app version.
+          releaseBody: 'See the assets to download and install this version.'
+          releaseDraft: false
+          prerelease: false
