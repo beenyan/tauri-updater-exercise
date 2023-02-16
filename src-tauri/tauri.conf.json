@@ -8,7 +8,7 @@
   },
   "package": {
     "productName": "tauri-updater-exercise",
-    "version": "0.0.1"
+    "version": "0.0.2"
   },
   "tauri": {
     "allowlist": {
@@ -72,7 +72,9 @@
     },
     "updater": {
       "active": true,
-      "endpoints": [],
+      "endpoints": [
+        "https://raw.githubusercontent.com/beenyan/tauri-updater-exercise/master/versions.json"
+      ],
       "dialog": true,
       "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IENBMTk1QzI3OTRBQzQ3NzgKUldSNFI2eVVKMXdaeWhocHJ2alVpaVI1N0hGZGdxWTJMSkM2YzN6R0t1bEhHT1h5VlRjWXRzVVEK"
     },
