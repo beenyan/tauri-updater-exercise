@@ -2,19 +2,19 @@
   "notes": "v0.1.0",
   "platforms": {
     "darwin-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IENBMTk1QzI3OTRBQzQ3NzgKUldSNFI2eVVKMXdaeWhocHJ2alVpaVI1N0hGZGdxWTJMSkM2YzN6R0t1bEhHT1h5VlRjWXRzVVEK",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSNFI2eVVKMXdaeWpGK3RiL0R4QUVmc0RkWGEyQ0l2dWU1dzRDVisrQWRFUHNycVVDMWNkYVU4SjhPSjBwNjdsRlhrVVJ1WjZLMlJ0NnBncnNXcWVYOEZpMDFjK2cyNWc0PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNjc2NTU0NDg5CWZpbGU6dGF1cmktdXBkYXRlci1leGVyY2lzZS5hcHAudGFyLmd6CnlHWUpqWmhKTlNRemQyNWZZazNidlFRbkI3TE5paTlCWjlldVpvLzlaUXBxMVVqL2RkTk9MRGFYa0NxWGJ4cVZ0OVh3QXcyN3NzUEpQekpwOVM5b0JnPT0K",
       "url": "https://github.com/beenyan/tauri-updater-exercise/releases/download/v0.1.0/tauri-updater-exercise.app.tar.gz"
     },
     "linux-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IENBMTk1QzI3OTRBQzQ3NzgKUldSNFI2eVVKMXdaeWhocHJ2alVpaVI1N0hGZGdxWTJMSkM2YzN6R0t1bEhHT1h5VlRjWXRzVVEK",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSNFI2eVVKMXdaeXFTcHMyYlJLVXpPN1hJTTdhRDQvamRWcDZsWW9rMnV2U2FYRXhKRWpsSlNmMFc3blRzbTdrM0h3VVE5Zmk1S2w1UUhjSHY3L2U1YWZkT1c5R0psVWdRPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNjc2NTU0NzI4CWZpbGU6dGF1cmktdXBkYXRlci1leGVyY2lzZV8wLjEuMF9hbWQ2NC5BcHBJbWFnZS50YXIuZ3oKTkY1ZnJMS29RVUFIekd2UE5ZMmN6anU1em1PSEVFblJRSFF4ZllHQmNodk5VMG5HL2VXa2RsZmh5ZmFNNExYcUZlV1V4b3p0WVJ5WHlGWVdLbjVyQXc9PQo=",
       "url": "https://github.com/beenyan/tauri-updater-exercise/releases/download/v0.1.0/tauri-updater-exercise_0.1.0_amd64.AppImage.tar.gz"
     },
     "windows-i686": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IENBMTk1QzI3OTRBQzQ3NzgKUldSNFI2eVVKMXdaeWhocHJ2alVpaVI1N0hGZGdxWTJMSkM2YzN6R0t1bEhHT1h5VlRjWXRzVVEK",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSNFI2eVVKMXdaeXY0ODc3UktRcmNSSnBIczc3ZzN6ZExHUnFLRmJFT1hOd1pxZ2o3WDJLcWM2TnJUZjBuRGFsSnd1NUtTa0kyc1B5enJ2V3UvNU1LRkgwemNlUGtXa0EwPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNjc2NTU0NzY1CWZpbGU6dGF1cmktdXBkYXRlci1leGVyY2lzZV8wLjEuMF94ODZfemgtVFcubXNpLnppcApmMHpONkh3cmUzcXJ0eEk4RjVzTDB4ZnZReWVvQnprME5CNm9pV2x3S3NyMmVQTDZWMWFVeVYwVEVVWUJsVHVhUnFOWWtqN1FjYTcvR1pESDNJdHFCUT09Cg==",
       "url": "https://github.com/beenyan/tauri-updater-exercise/releases/download/v0.1.0/tauri-updater-exercise_0.1.0_x86_zh-TW.msi.zip"
     },
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IENBMTk1QzI3OTRBQzQ3NzgKUldSNFI2eVVKMXdaeWhocHJ2alVpaVI1N0hGZGdxWTJMSkM2YzN6R0t1bEhHT1h5VlRjWXRzVVEK",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSNFI2eVVKMXdaeW5JRFZ6YTFMVHo3SDlCalNaN3JTSEpVQXF6bHRVTG5zVHJGREdLS3A5SHIxK1g2SWM5cktaQjI5TWljeXV4Yi9SY3FLeU9VVXU4MUd1VGUxVWl3R1F3PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNjc2NTU1MTA1CWZpbGU6dGF1cmktdXBkYXRlci1leGVyY2lzZV8wLjEuMF94NjRfemgtVFcubXNpLnppcApKVEpYOTIyamdiYWZCUEJRUTJ1WE82dll0NEhBL1JUamM1bXpwOG5DRTZRaEhVajc2amZsR3IyaGUvM05RbE9KU1NmeG5CZkFteTB2VllhbWppQ1pDZz09Cg==",
       "url": "https://github.com/beenyan/tauri-updater-exercise/releases/download/v0.1.0/tauri-updater-exercise_0.1.0_x64_zh-TW.msi.zip"
     }
   },
