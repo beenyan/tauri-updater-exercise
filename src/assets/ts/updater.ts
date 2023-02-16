@@ -1,51 +1,34 @@
-import { getClient } from '@tauri-apps/api/http';
-import { getVersion } from '@tauri-apps/api/app';
-import { type } from '@tauri-apps/api/os';
+import { checkUpdate, installUpdate } from '@tauri-apps/api/updater'
+import { relaunch } from '@tauri-apps/api/process'
+import Swal from 'sweetalert2/dist/sweetalert2.js';
 
-interface Assets {
-    browser_download_url: string,
-    name: string
-}
+export async function updateCheck() {
 
-interface ReleasesData {
-    assets: Assets[],
-    draft: boolean,
-    prerelease: boolean,
-};
+    const { shouldUpdate, manifest } = await checkUpdate()
+    if (!shouldUpdate) return;
+    try {
+        const result = await Swal.fire({
+            position: 'bottom-end',
+            icon: 'info',
+            title: `Update v${manifest?.version} available`,
+            text: `${manifest?.body}`,
+            showConfirmButton: true,
+            confirmButtonText: "Install update and relaunch",
+            showCancelButton: true,
+            backdrop: false,
+        });
 
-const platformSuffix = {
-    Darwin: '.AppImage',
-    Linux: '.deb',
-    Windows_NT: '.msi',
-};
+        if (result.isConfirmed === false) return;
 
-const url = 'https://api.github.com/repos/beenyan/tauri-updater-exercise/releases';
-export async function dd() {
-    const client = await getClient();
-    const response = await client.get<ReleasesData[]>(url);
-    const data = response.data;
-    if (response.status != 200) {
-        console.warn(`Url 連接失敗`, response);
-        return;
+        // display dialog
+        await installUpdate()
+        // install complete, restart the app
+        await relaunch()
+    } catch (error) {
+        Swal.fire({
+            icon: 'error',
+            title: `更新失敗`,
+            text: `${error}`,
+        });
     }
-
-    const suffix = platformSuffix[await type()];
-
-    const releaseLatest = data.find(e => !e.draft && !e.prerelease);
-    if (releaseLatest === undefined) {
-        console.warn(`無發行版本`, data);
-        return;
-    }
-
-    console.log(releaseLatest);
-    const binaryAsset = releaseLatest.assets.find(e =>
-        e.name.endsWith(suffix)
-    );
-    if (binaryAsset === undefined) {
-        console.warn(`無可用更新`, releaseLatest.assets);
-        return;
-    }
-
-    console.log(releaseLatest.assets, await getVersion());
-
 }

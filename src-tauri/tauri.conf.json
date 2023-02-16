@@ -23,13 +23,6 @@
         "relaunch": true,
         "relaunchDangerousAllowSymlinkMacos": false
       },
-      "http": {
-        "all": false,
-        "request": true,
-        "scope": [
-          "https://api.github.com/repos/beenyan/*"
-        ]
-      },
       "os": {
         "all": true
       }
@@ -78,7 +71,7 @@
       "endpoints": [
         "https://raw.githubusercontent.com/beenyan/tauri-updater-exercise/master/versions.json"
       ],
-      "dialog": true,
+      "dialog": false,
       "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IENBMTk1QzI3OTRBQzQ3NzgKUldSNFI2eVVKMXdaeWhocHJ2alVpaVI1N0hGZGdxWTJMSkM2YzN6R0t1bEhHT1h5VlRjWXRzVVEK"
     },
     "windows": [

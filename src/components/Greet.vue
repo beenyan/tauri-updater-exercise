@@ -17,5 +17,5 @@ async function greet() {
     <button type="button" @click="greet()">Greet</button>
   </div>
 
-  <p>{{ greetMsg }}</p>
+<p>{{ greetMsg }}</p>
 </template>

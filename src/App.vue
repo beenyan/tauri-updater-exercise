@@ -1,38 +1,25 @@
 <script setup lang="ts">
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
+
 import Greet from "./components/Greet.vue";
 import { getVersion } from "@tauri-apps/api/app";
 import { ref } from "vue";
-import Swal from 'sweetalert2/dist/sweetalert2.js';
-import { dd } from "./assets/ts/updater";
+import { updateCheck } from "./assets/ts/updater";
 
 let version = ref('');
 async function init() {
   version.value = `v${await getVersion()}`;
+  updateCheck();
 }
 init();
-
-function showAlert() {
-  Swal.fire({
-    position: 'bottom-end',
-    icon: 'info',
-    title: 'Update v0.0.0 available',
-    showConfirmButton: true,
-    confirmButtonText: "Install update and relaunch",
-    showCancelButton: true,
-    backdrop: false,
-  })
-}
-
-dd()
 </script>
 
 <template>
   <div class="container">
     <h1>Welcome to Tauri! {{ version }}</h1>
 
-    <button @click="showAlert">Hello world</button>
+    <button>Hello world</button>
 
     <div class="row">
       <a href="https://vitejs.dev" target="_blank">
@@ -60,8 +47,7 @@ dd()
     </p>
 
     <Greet />
-  </div>
-
+</div>
 </template>
 
 <style scoped>
