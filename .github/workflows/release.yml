@@ -49,11 +49,12 @@ jobs:
 
       - name: Build the app
         uses: tauri-apps/tauri-action@v0
-
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           TAURI_PRIVATE_KEY: ${{ secrets.TAURI_PRIVATE_KEY }}
           TAURI_KEY_PASSWORD: "" # if u has password ${{ secrets.TAURI_KEY_PASSWORD }}
+        run: |
+          tauri build --target i686-pc-windows-msvc
         with:
           tagName: ${{ github.ref_name }} # This only works if your workflow triggers on new tags.
           releaseName: 'Tauri Release Exercise v__VERSION__' # tauri-action replaces \_\_VERSION\_\_ with the app version.
@@ -61,11 +62,9 @@ jobs:
           releaseDraft: false
           prerelease: false
 
-      - name: Build x86 (windows only)
-        if: matrix.platform == 'windows-latest'
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          TAURI_PRIVATE_KEY: ${{ secrets.TAURI_PRIVATE_KEY }}
-          TAURI_KEY_PASSWORD: ""
-        run: |
-          tauri build --target i686-pc-windows-msvc
+      # - name: Build x86 (windows only)
+      #   if: matrix.platform == 'windows-latest'
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #     TAURI_PRIVATE_KEY: ${{ secrets.TAURI_PRIVATE_KEY }}
+      #     TAURI_KEY_PASSWORD: ""
